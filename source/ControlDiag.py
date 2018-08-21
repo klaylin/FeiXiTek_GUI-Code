@@ -1,4 +1,5 @@
 #!/usr/bin/python
+#coding:utf-8
 """
 Control Diagnostic Module: This module provides all the diagnostic tools.
 
@@ -154,6 +155,7 @@ class xDiagUtility(object):
         
         # count the LX.....zip files
         zip_file_count = 0
+        LX_zip_files=[]      #storage LX...zip
         for file in glob.glob(os.path.join(zippath, prefix+'*.zip')): zip_file_count += 1
         if zip_file_count ==0: 
             dbg.printDBG1 (file_name, '!!!no zip file found')
@@ -161,16 +163,23 @@ class xDiagUtility(object):
             return False
 
         # find the newest file
-        newest_file, newest_time = None, None
-        for dirpath, dirs, files in os.walk(zippath):
-            for filename in files:
-                file_path = os.path.join(dirpath, filename)
-                file_time = os.stat(file_path).st_mtime
-                if file_path.endswith(".zip") and file_path.startswith (zippath + prefix) and \
-                    (file_time>newest_time or newest_time is None):
-                    newest_file, newest_time = file_path, file_time
+#         newest_file, newest_time = None, None
+#         for dirpath, dirs, files in os.walk(zippath):
+#             for filename in files:
+#                 file_path = os.path.join(dirpath, filename)
+#                 file_time = os.stat(file_path).st_mtime
+#                 if file_path.endswith(".zip") and file_path.startswith (zippath + prefix) and \
+#                     (file_time>newest_time or newest_time is None):
+#                     newest_file, newest_time = file_path, file_time
+        newest_file, newest_time = None, None  #fix send GUI Trace
+        for file_path in LX_zip_files:
+            #print file_path
+            file_time = os.stat(file_path).st_mtime  #st_mtime最后一次修改时间
+            if (file_time>newest_time or newest_time is None):
+               newest_file,newest_time = file_path,file_time
+               
         # copy file to the root directory as file to send
-        file_to_send = newest_file.replace('/', ' ').split()[-1]
+        file_to_send = newest_file.replace('/', ' ').replace('\\',' ').split()[-1]
         
         es = cfg['General']['MAILTO']
         

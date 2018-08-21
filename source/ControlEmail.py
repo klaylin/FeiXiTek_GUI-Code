@@ -45,6 +45,7 @@ class xEmail(object):
                 
         FROM = info["uu"]
         TO = [info["recipient1"], info["recipient2"], info["recipient3"], info["recipient4"], info["recipient5"], ]  # must be a list
+        TO =[recipent for recipent in TO if recipent.replace(" ","")] 
 
         s = cfg['General']['LOCATION'][1:-1]
         SUBJECT = "Location: "+s+"; "+info["subject"] 
@@ -110,6 +111,7 @@ class xEmail(object):
         
         FROM = info["uu"]
         TO = [info["recipient1"], info["recipient2"], info["recipient3"], info["recipient4"], info["recipient5"], ]  # must be a list
+        TO =[recipent for recipent in TO if recipent.replace(" ","")]
 
         s = cfg['General']['LOCATION'][1:-1]
         SUBJECT = "Location: "+s+"; "+info["subject"] + "; status: %s" % status
@@ -191,6 +193,7 @@ class xEmail(object):
 #
         msg.attach(text_part)
         msg.attach(attachment)
+        fp.close()  
         os.remove(file_to_send)
         
         try:

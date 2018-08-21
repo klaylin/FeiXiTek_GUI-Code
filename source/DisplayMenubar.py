@@ -20,6 +20,7 @@ import ControlTCP
 import ControlSwitch
 import ControlJSON
 import ZipUtility, ControlEmail
+from idlelib.ReplaceDialog import replace
 
 file_name = os.path.basename(__file__)
 
@@ -1571,7 +1572,7 @@ class DisplayMenubar():
 #
         h = hashlib.md5()
         f = open("./data/temp.dat", 'rb')
-        h.update(f.read())
+        h.update(f.read().replace("\r",'')) #compatible Windows 7，\r：windows  /n Mac
         s = h.hexdigest()
         f.close()
         os.remove("./data/temp.dat")
@@ -1668,7 +1669,7 @@ class DisplayMenubar():
 # Add hash number to end of the file
         h = hashlib.md5()
         f = open(data_file_name, 'rb')
-        h.update(f.read())
+        h.update(f.read().replace("\r",'')) #fix save button 
         f = open(data_file_name, 'a')
         f.write(h.hexdigest())
         f.close()
