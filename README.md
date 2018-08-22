@@ -14,7 +14,7 @@ DisplayMenubar.py 1574行：h.update(f.read().replace("\r",'')) #compatible Wind
 send GUI trace异常修复：
 ControlDiag.py  157行：LX_zip_files=[]      #用来存放LX...zip
 ControlDiag.py  173-179为新加代码
-ControlDiag.py  181行 file_to_send = newest_file.replace('/', ' ').replace('\\',' ').split()[-1]
+ControlDiag.py  190行 file_to_send = newest_file.replace('/', ' ').replace('\\',' ').split()[-1]
 ControlEmail.py  156行，新增fp.close() 
 
 Save功能的异常修复：

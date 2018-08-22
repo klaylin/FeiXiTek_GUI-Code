@@ -150,36 +150,49 @@ class xDiagUtility(object):
         if not os.path.exists(zippath):
             dbg.printDBG1 (file_name, '!!!no zippath found')
             tkMessageBox.showerror("Send Trace", "No zip directory found!!")
+            #print 'cde'
             return False
         prefix = type
         
         # count the LX.....zip files
         zip_file_count = 0
-        LX_zip_files=[]      #storage LX...zip
-        for file in glob.glob(os.path.join(zippath, prefix+'*.zip')): zip_file_count += 1
-        if zip_file_count ==0: 
+        LX_zip_files=[]      #用来存放LX...zip
+        for file in glob.glob(os.path.join(zippath, prefix+'*.zip')): 
+            LX_zip_files.append(file)
+            zip_file_count += 1
+        if zip_file_count ==0:  #说明没有按get GUI trace
             dbg.printDBG1 (file_name, '!!!no zip file found')
             tkMessageBox.showerror("Send Trace", "No zip file found!!")
+            #print 'efg'
             return False
 
         # find the newest file
 #         newest_file, newest_time = None, None
 #         for dirpath, dirs, files in os.walk(zippath):
-#             for filename in files:
-#                 file_path = os.path.join(dirpath, filename)
-#                 file_time = os.stat(file_path).st_mtime
-#                 if file_path.endswith(".zip") and file_path.startswith (zippath + prefix) and \
-#                     (file_time>newest_time or newest_time is None):
-#                     newest_file, newest_time = file_path, file_time
-        newest_file, newest_time = None, None  #fix send GUI Trace
+#             print 'dirpath:',dirpath
+#             print 'dirs:',dirs
+#             print 'files:',files
+#              for filename in files:
+#                  file_path = os.path.join(dirpath, filename)
+#                  file_time = os.stat(file_path).st_mtime
+#                  #print 'ooo'
+#                  if file_path.endswith(".zip") and file_path.startswith (zippath + prefix) and \
+#                      (file_time>newest_time or newest_time is None):
+#                      newest_file, newest_time = file_path, file_time
+            #print 'fgh'
+        newest_file, newest_time = None, None
         for file_path in LX_zip_files:
             #print file_path
             file_time = os.stat(file_path).st_mtime  #st_mtime最后一次修改时间
             if (file_time>newest_time or newest_time is None):
                newest_file,newest_time = file_path,file_time
-               
+               #print newest_file
+        
         # copy file to the root directory as file to send
-        file_to_send = newest_file.replace('/',' ').replace('\\',' ').split()[-1]
+        #print 'newest_file:',newest_file
+        file_to_send = newest_file.replace('/', ' ').replace('\\',' ').split()[-1]  #.replace('\\',' ')对最新文件LX...zip进行切割，取最后一个列表值，即LX2018.....
+        #file_to_send = newest_file.replace('/', ' ').split()[-1]  #!!window上不是这符号，没能replace，也就切割不了
+        #print 'file_to_send:',file_to_send
         
         es = cfg['General']['MAILTO']
         
