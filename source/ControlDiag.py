@@ -179,7 +179,7 @@ class xDiagUtility(object):
                newest_file,newest_time = file_path,file_time
                
         # copy file to the root directory as file to send
-        file_to_send = newest_file.replace('/', ' ').replace('\\',' ').split()[-1]
+        file_to_send = newest_file.replace('/',' ').replace('\\',' ').split()[-1]
         
         es = cfg['General']['MAILTO']
         
