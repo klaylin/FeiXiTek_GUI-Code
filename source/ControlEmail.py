@@ -45,7 +45,9 @@ class xEmail(object):
                 
         FROM = info["uu"]
         TO = [info["recipient1"], info["recipient2"], info["recipient3"], info["recipient4"], info["recipient5"], ]  # must be a list
-        TO =[recipent for recipent in TO if recipent.replace(" ","")] 
+        TO =[recipent for recipent in TO if recipent.replace(" ","")] #tiantian solution 
+        print 'TO:',TO
+        
 
         s = cfg['General']['LOCATION'][1:-1]
         SUBJECT = "Location: "+s+"; "+info["subject"] 
@@ -54,13 +56,12 @@ class xEmail(object):
         TEXT = info["message"] + "\n" + \
                 "Engine IP = " + s
        
-        # Prepare actual message
-        message = """\From: %s\nTo: %s\nSubject: %s\n\n%s
+        # Prepare actual message   """\From: %s\nTo: %s\nSubject: %s\n\n%s     
+        message = """From: %s\nTo: %s\nSubject: %s\n\n%s     
         """ % (FROM, ", ".join(TO), SUBJECT, TEXT)
-        
-#        print message
         ans = tkMessageBox.askokcancel("Send Email", 
             "The following test Message will be sent out :\r\r%s" % message[1:])
+
         
         if ans != True:
             tkMessageBox.showinfo("Send Email", "Action has been cancelled.")
@@ -69,13 +70,15 @@ class xEmail(object):
         try:
             if smtp_ssl == "Yes":
                 server = smtplib.SMTP_SSL(info["server"], info["port"])
+               
             else:
                 smtp_host = info["server"]
                 smtp_port = info["port"]
                 server = smtplib.SMTP()
+                print 'server:',server
         except:
             dbg.printDBG1(file_name, "Failed to access smtp server!")
-            tkMessageBox.showerror("Send Email", "Not able to access the smtp server")
+            tkMessageBox.showerror("Send Email", "Not able to access the smtp server") 
             return False
         try:
             if smtp_ssl != "Yes":
@@ -84,12 +87,15 @@ class xEmail(object):
                 server.ehlo()
                 server.starttls()
             server.login(uu,ww)
+            
         except:
+            print 'cannot connect...'
             dbg.printDBG1(file_name, "Wrong ID or PW")
             tkMessageBox.showerror("Send Email", "Wrong ID or PW!")
             return False
-        try:            
-            server.sendmail(FROM, TO, message)
+        try:    
+            server.sendmail(FROM, TO,message)       
+
         except:
             dbg.printDBG1(file_name, "Failed to sent email")
             tkMessageBox.showerror("Send Email", "Not able to send email!")
@@ -97,6 +103,7 @@ class xEmail(object):
 
         server.close()
         dbg.printDBG1(file_name, "Successfully sent email")
+        print 'Successfully'
         return True
 #
     def auto_send_message(self, info, status):
@@ -111,7 +118,7 @@ class xEmail(object):
         
         FROM = info["uu"]
         TO = [info["recipient1"], info["recipient2"], info["recipient3"], info["recipient4"], info["recipient5"], ]  # must be a list
-        TO =[recipent for recipent in TO if recipent.replace(" ","")]
+        TO =[recipent for recipent in TO if recipent.replace(" ","")] 
 
         s = cfg['General']['LOCATION'][1:-1]
         SUBJECT = "Location: "+s+"; "+info["subject"] + "; status: %s" % status
@@ -123,6 +130,7 @@ class xEmail(object):
         # Prepare actual message
         message = """\From: %s\nTo: %s\nSubject: %s\n\n%s
         """ % (FROM, ", ".join(TO), SUBJECT, TEXT)
+        
         
         try:
             if smtp_ssl == "Yes":
@@ -144,7 +152,7 @@ class xEmail(object):
             dbg.printDBG1(file_name, "Wrong ID or PW!")
             return False
         try:            
-            server.sendmail(FROM, TO, message)
+            server.sendmail(FROM, TO, message1)
         except:
             dbg.printDBG1(file_name, "Failed to sent email")
             return False
