@@ -23,4 +23,5 @@ ControlEmail.py 204行，新增fp.close()
 Save功能的异常修复：
  DisplayMenubar.py 1672行：h.update(f.read().replace("\r",'')) #fix save button
 
-Test功能异常修复： ControlEmail.py 48行新增 TO =[recipent for recipent in TO if recipent.replace(" ","")] ControlEmail.py 121行新增 TO =[recipent for recipent in TO if recipent.replace(" ","")]
+Test功能异常修复： ControlEmail.py 48行新增 TO =[recipent for recipent in TO if recipent.replace(" ","")] 
+ControlEmail.py 121行新增 TO =[recipent for recipent in TO if recipent.replace(" ","")]
