@@ -20,7 +20,7 @@ import ControlTCP
 import ControlSwitch
 import ControlJSON
 import ZipUtility, ControlEmail
-from idlelib.ReplaceDialog import replace
+
 
 file_name = os.path.basename(__file__)
 
