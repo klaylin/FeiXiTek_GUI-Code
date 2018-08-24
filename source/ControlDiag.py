@@ -183,12 +183,12 @@ class xDiagUtility(object):
             file_time = os.stat(file_path).st_mtime  
             if (file_time>newest_time or newest_time is None):
                newest_file,newest_time = file_path,file_time
-               #print newest_file
+              
         
         # copy file to the root directory as file to send
-        #print 'newest_file:',newest_file
+        
         file_to_send = newest_file.replace('/', ' ').replace('\\',' ').split()[-1]  
-        #print 'file_to_send:',file_to_send
+        
         
         es = cfg['General']['MAILTO']
         

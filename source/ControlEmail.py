@@ -45,8 +45,8 @@ class xEmail(object):
                 
         FROM = info["uu"]
         TO = [info["recipient1"], info["recipient2"], info["recipient3"], info["recipient4"], info["recipient5"], ]  # must be a list
-        TO =[recipent for recipent in TO if recipent.replace(" ","")] #tiantian solution 
-        print 'TO:',TO
+        TO =[recipent for recipent in TO if recipent.replace(" ","")] 
+        
         
 
         s = cfg['General']['LOCATION'][1:-1]
@@ -103,7 +103,7 @@ class xEmail(object):
 
         server.close()
         dbg.printDBG1(file_name, "Successfully sent email")
-        print 'Successfully'
+        
         return True
 #
     def auto_send_message(self, info, status):
