@@ -152,7 +152,7 @@ class xEmail(object):
             dbg.printDBG1(file_name, "Wrong ID or PW!")
             return False
         try:            
-            server.sendmail(FROM, TO, message1)
+            server.sendmail(FROM, TO, message)
         except:
             dbg.printDBG1(file_name, "Failed to sent email")
             return False
