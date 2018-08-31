@@ -1,0 +1,13 @@
+Released Note:
+当前版本：v18_1.1.0
+日期：2018/08/31
+Author: Tian Ma
+
+更新原因及内容：
+GUI Code v18_1.1.0修复了v18_1.1版本中”Diagnostic Tools” ->”Get Engine Diagnostic Trace”功能的bug。
+Bug：
+1. 在仿真模式(GUImain.py中“SIMMOD=1”)下，运行“Get Engine Diagnostic Trace (Current, Primary, & Secondary)”或者“Get Engine Diagnostic Trace (Current & Primary)” 出现报错（提示：(ControlEngine.py line 1130) - AttributeError: 'xEngine' object has no attribute 'logfile’) => 导致无法正常写入.tmp文件，以及无法在./zip/下创建HAXXXXX.zip压缩文件。
+
+修改代码如下：
+1. 新增ControlEngine.py 1130行：self.logfile = open(f, 'a')  
+2. 修改ControlEngine.py 1131行(原1130行)：self.logfile.write( "....time-out, %s\n" % engine_ip) （v18_1.1版本中为self.engine_ip）
