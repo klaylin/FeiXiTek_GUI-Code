@@ -1127,7 +1127,8 @@ class xEngine(object):
         try:
             self.tn = Telnet(engine_ip, timeout = 2)
         except:
-            self.logfile.write( "....time-out, %s\n" % self.engine_ip)
+            self.logfile = open(f, 'a')
+            self.logfile.write( "....time-out, %s\n" % engine_ip)
             if SIMMOD == 1: return True
             return False
 
