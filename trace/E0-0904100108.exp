@@ -1,0 +1,33 @@
+Telnet to : 10.203.1.111, Time Stamp : 2018-09-04 10:01:08.977
+Connection to the Loxoll SILVERstor ClusterIO HA engine has been established.
+Enter password: ********
+Password accepted!
+
+User Service Utility Key Assignments:
+
+'?': Show User Service Utility Key Assignments Menu
+'1': Show Vital Product Data
+'2': Show LUN Map
+'4': Configure Management Server Access
+'6': View/Change Interface Configuration
+'7': Start Command Line Interface mode
+'8': Disk/Fabric Performance Test
+'9': Clear SAN database
+'B': Reboot Router
+'H': Report overall system health
+'F': Reset to Factory Default
+'Q': Quit User Service Utility
+'Z': Coredump Menu
+
+CIO 0 > Unknown status request in Serial Port Service default Utility Menu!
+
+CIO 1 > Unknown status request in Serial Port Service default Utility Menu!
+
+CIO 2 > Unknown status request in Serial Port Service default Utility Menu!
+
+CIO 3 > Unknown status request in Serial Port Service default Utility Menu!
+
+CIO 4 > 
+CIO 5 > 
+Quit User Menu? (Y/N)
+Debug Session Terminated, Good Bye!

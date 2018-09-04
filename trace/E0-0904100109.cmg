@@ -1,5 +1,5 @@
-Telnet to : 10.9.95.108, Time Stamp : 2017-08-24 13:49:48.862
-Connection to the Loxoll HA-AP engine has been established.
+Telnet to : 10.203.1.111, Time Stamp : 2018-09-04 10:01:09.870
+Connection to the Loxoll SILVERstor ClusterIO HA engine has been established.
 Enter password: ********
 Password accepted!
 
@@ -19,7 +19,7 @@ User Service Utility Key Assignments:
 'Q': Quit User Service Utility
 'Z': Coredump Menu
 
-HA-AP 0 > 
+CIO 0 > 
 Configure which interface?
 	A = Port A1
 	B = Port A2
@@ -33,18 +33,18 @@ Configure which interface?
 	      (shut down if no storage or engines seen)
 	<Enter> = done
 
-HA-AP 1 > 
+CIO 1 > 
 
 ** Port A1 configuration **
 Link speed settings:
 	Current: 8Gb/s
 	Default: 8Gb/s
 WWPN settings:
-	Current: 0x2100-006022-AD0CE2
-	Default: 0x2100-006022-AD0CE2
+	Current: 0x2100-006022-AD0AB4
+	Default: 0x2100-006022-AD0AB4
 WWNN settings:
-	Current: 0x2000-006022-AD0CDE
-	Default: 0x2000-006022-AD0CE2
+	Current: 0x2000-006022-AD0AB4
+	Default: 0x2000-006022-AD0AB4
 Operating Mode:
 	Current: Point-to-point mode
 	Default: Point-to-point mode
@@ -71,7 +71,7 @@ Options:
 	<Esc> = restore entry settings (discard changes)
 	<Enter> = record changes (if any) and exit or reboot
 
-HA-AP 2 > 
+CIO 2 > 
 Configure which interface?
 	A = Port A1
 	B = Port A2
@@ -85,18 +85,18 @@ Configure which interface?
 	      (shut down if no storage or engines seen)
 	<Enter> = done
 
-HA-AP 3 > 
+CIO 3 > 
 
 ** Port A2 configuration **
 Link speed settings:
 	Current: 8Gb/s
 	Default: 8Gb/s
 WWPN settings:
-	Current: 0x2200-006022-AD0CE2
-	Default: 0x2200-006022-AD0CE2
+	Current: 0x2200-006022-AD0AB4
+	Default: 0x2200-006022-AD0AB4
 WWNN settings:
-	Current: 0x2000-006022-AD0CDE
-	Default: 0x2000-006022-AD0CE2
+	Current: 0x2000-006022-AD0AB4
+	Default: 0x2000-006022-AD0AB4
 Operating Mode:
 	Current: Point-to-point mode
 	Default: Point-to-point mode
@@ -123,7 +123,7 @@ Options:
 	<Esc> = restore entry settings (discard changes)
 	<Enter> = record changes (if any) and exit or reboot
 
-HA-AP 4 > 
+CIO 4 > 
 Configure which interface?
 	A = Port A1
 	B = Port A2
@@ -137,18 +137,18 @@ Configure which interface?
 	      (shut down if no storage or engines seen)
 	<Enter> = done
 
-HA-AP 5 > 
+CIO 5 > 
 
 ** Port B1 configuration **
 Link speed settings:
 	Current: 8Gb/s
 	Default: 8Gb/s
 WWPN settings:
-	Current: 0x2300-006022-AD0CE2
-	Default: 0x2300-006022-AD0CE2
+	Current: 0x2300-006022-AD0AB4
+	Default: 0x2300-006022-AD0AB4
 WWNN settings:
-	Current: 0x2000-006022-AD0CE2
-	Default: 0x2000-006022-AD0CE2
+	Current: 0x2000-006022-AD0AB4
+	Default: 0x2000-006022-AD0AB4
 Operating Mode:
 	Current: Point-to-point mode
 	Default: Point-to-point mode
@@ -175,7 +175,7 @@ Options:
 	<Esc> = restore entry settings (discard changes)
 	<Enter> = record changes (if any) and exit or reboot
 
-HA-AP 6 > 
+CIO 6 > 
 Configure which interface?
 	A = Port A1
 	B = Port A2
@@ -189,18 +189,18 @@ Configure which interface?
 	      (shut down if no storage or engines seen)
 	<Enter> = done
 
-HA-AP 7 > 
+CIO 7 > 
 
 ** Port B2 configuration **
 Link speed settings:
 	Current: 8Gb/s
 	Default: 8Gb/s
 WWPN settings:
-	Current: 0x2400-006022-AD0CE2
-	Default: 0x2400-006022-AD0CE2
+	Current: 0x2400-006022-AD0AB4
+	Default: 0x2400-006022-AD0AB4
 WWNN settings:
-	Current: 0x2000-006022-AD0CE2
-	Default: 0x2000-006022-AD0CE2
+	Current: 0x2000-006022-AD0AB4
+	Default: 0x2000-006022-AD0AB4
 Operating Mode:
 	Current: Point-to-point mode
 	Default: Point-to-point mode
@@ -227,7 +227,7 @@ Options:
 	<Esc> = restore entry settings (discard changes)
 	<Enter> = record changes (if any) and exit or reboot
 
-HA-AP 8 > 
+CIO 8 > 
 Configure which interface?
 	A = Port A1
 	B = Port A2
@@ -241,19 +241,19 @@ Configure which interface?
 	      (shut down if no storage or engines seen)
 	<Enter> = done
 
-HA-AP 9 > 
+CIO 9 > 
 
 ** Storage Emulation Options **
-Current inquiry option is <Loxoll>
-Entry inquiry option was <Loxoll>
+Current inquiry option is <SILVERstor>
+Entry inquiry option was <SILVERstor>
 Storage emulation options:
-	D = Loxoll (default)
+	D = SILVERstor (default)
 	S = SDD
 	? = show settings as changed
 	<Esc> = restore entry settings (discard changes)
 	<Enter> = accept and exit
 
-HA-AP 10 > 
+CIO 10 > 
 Configure which interface?
 	A = Port A1
 	B = Port A2
@@ -267,8 +267,8 @@ Configure which interface?
 	      (shut down if no storage or engines seen)
 	<Enter> = done
 
-HA-AP 11 > 
-HA-AP 12 > 
+CIO 11 > 
+CIO 12 > 
 User Service Utility Key Assignments:
 
 '?': Show User Service Utility Key Assignments Menu
@@ -285,68 +285,28 @@ User Service Utility Key Assignments:
 'Q': Quit User Service Utility
 'Z': Coredump Menu
 
-HA-AP 13 > 
+CIO 13 > 
 Enter [exit] to return
 CLI>conmgr engine status
 
-  3 Engines
+  0 Engines
 ===========
- tnum port wwpn               status
-    1 B1   2300-006022-ad0cde A
-      B2   2400-006022-ad0cde A
-    2 B1   2300-006022-ad0ce0 A
-      B2   2400-006022-ad0ce0 A
-    4 B1   2300-006022-ad0ce4 A
-      B2   2400-006022-ad0ce4 A
 
 CLI>conmgr drive status
 
-  4 Drives
+  0 Drives
 ==========
- tnum port wwpn               lun               status                  RE-stat
-    0 B1   2070-00c0ff-275591 0035-000000000000 A active/optimized      A
-      B2   2270-00c0ff-275591 0035-000000000000 A active/optimized      
-      B1   2470-00c0ff-275591 0035-000000000000 A active/non-optimized  
-      B2   2670-00c0ff-275591 0035-000000000000 A active/non-optimized  
-    1 B1   2070-00c0ff-2755af 0035-000000000000 A active/non-optimized  A
-      B2   2270-00c0ff-2755af 0035-000000000000 A active/non-optimized  
-      B1   2470-00c0ff-2755af 0035-000000000000 A active/optimized      
-      B2   2670-00c0ff-2755af 0035-000000000000 A active/optimized      
-    2 B1   2011-0002ac-006221 0001-000000000000 A                       A
-      B1   2111-0002ac-006221 0001-000000000000 A                       
-      B1   2211-0002ac-006221 0001-000000000000 A                       
-      B1   2311-0002ac-006221 0001-000000000000 A                       
-      B2   2022-0002ac-006221 0001-000000000000 A                       
-      B2   2122-0002ac-006221 0001-000000000000 A                       
-      B2   2222-0002ac-006221 0001-000000000000 A                       
-      B2   2322-0002ac-006221 0001-000000000000 A                       
-    3 B1   2011-0002ac-006222 0001-000000000000 A                       A
-      B1   2111-0002ac-006222 0001-000000000000 A                       
-      B1   2211-0002ac-006222 0001-000000000000 A                       
-      B1   2311-0002ac-006222 0001-000000000000 A                       
-      B2   2022-0002ac-006222 0001-000000000000 A                       
-      B2   2122-0002ac-006222 0001-000000000000 A                       
-      B2   2222-0002ac-006222 0001-000000000000 A                       
-      B2   2322-0002ac-006222 0001-000000000000 A                       
 
 CLI>conmgr initiator status
 
-  4 Initiators
+  0 Initiators
 ==============
- tnum type port wwpn               status
-    0    0 A2   2100-001b32-9a6162 A
-    1    0 A1   2101-001b32-ba6162 A
-    2    0 A1   2100-0024ff-007511 A
-    3    0 A2   2100-0024ff-007586 A
 
 CLI>engine
 
    Engine  Status  Serial #  IP Addresses (1/2)                Firmware
    --------------------------------------------------------------------
-   1  (M)  Online     ... further info not available
-   2       Online     ... further info not available
->> 3       Online  11341026  10.9.95.108/20.20.20.1            15.9.7.7 OR
-   4       Online     ... further info not available
+>> 0  (M)  Online  11340468  10.203.1.111/20.20.20.1           15.9.7.8 #20
 
 CLI>drvstate
 
@@ -354,16 +314,15 @@ CLI>drvstate
 Resource drives:
     Target #        Capacity (LBA)  I/O cnt  State
     --------        --------------  -------  -----
-           0            8595701760        0  Operational
-           1            8595701760        0  Operational
-           2            8388608000        0  Operational
-           3            8388608000        0  Operational
+        2044            1073741824        0  Operational
+        2045            1073741824        0  Operational
+        2046            1073741824        0  Operational
+        2047            1073741824        0  Operational
 
 Complex drives:
     Target #   Subtype   I/O cnt  State
     --------  ---------  -------  -----
       0x8201   Mirror          0  Operational
-      0x8202   Mirror          0  Operational
 
 
 CLI>license status
@@ -380,103 +339,29 @@ Installed licenses:
 
 Mask words: 6c, 80, 40008, 0
 
-Loxoll bundle
+SILVERstor bundle
 
 CLI>conmgr
 
-  4 Drives
+  0 Drives
 ==========
- tnum type port wwpn               lun                rd  wr
-    0 A-P  B1   2070-00c0ff-275591 0035-000000000000   1   1
-           B2   2270-00c0ff-275591 0035-000000000000   1   1
-           B1   2470-00c0ff-275591 0035-000000000000   1   1
-           B2   2670-00c0ff-275591 0035-000000000000   1   1
-    1 A-P  B1   2070-00c0ff-2755af 0035-000000000000   1   1
-           B2   2270-00c0ff-2755af 0035-000000000000   1   1
-           B1   2470-00c0ff-2755af 0035-000000000000   1   1
-           B2   2670-00c0ff-2755af 0035-000000000000   1   1
-    2 A-A  B1   2011-0002ac-006221 0001-000000000000   1   1
-           B1   2111-0002ac-006221 0001-000000000000   1   1
-           B1   2211-0002ac-006221 0001-000000000000   1   1
-           B1   2311-0002ac-006221 0001-000000000000   1   1
-           B2   2022-0002ac-006221 0001-000000000000   1   1
-           B2   2122-0002ac-006221 0001-000000000000   1   1
-           B2   2222-0002ac-006221 0001-000000000000   1   1
-           B2   2322-0002ac-006221 0001-000000000000   1   1
-    3 A-A  B1   2011-0002ac-006222 0001-000000000000   1   1
-           B1   2111-0002ac-006222 0001-000000000000   1   1
-           B1   2211-0002ac-006222 0001-000000000000   1   1
-           B1   2311-0002ac-006222 0001-000000000000   1   1
-           B2   2022-0002ac-006222 0001-000000000000   1   1
-           B2   2122-0002ac-006222 0001-000000000000   1   1
-           B2   2222-0002ac-006222 0001-000000000000   1   1
-           B2   2322-0002ac-006222 0001-000000000000   1   1
 
-  3 Engines        our engine number:     3
+  0 Engines        our engine number:     0
 ===========
- tnum port wwpn
-    1 B1   2300-006022-ad0cde
-      B2   2400-006022-ad0cde
-    2 B1   2300-006022-ad0ce0
-      B2   2400-006022-ad0ce0
-    4 B1   2300-006022-ad0ce4
-      B2   2400-006022-ad0ce4
 
-  4 Initiators
+  0 Initiators
 ==============
- tnum type port wwpn
-    0    0 A2   2100-001b32-9a6162
-    1    0 A1   2101-001b32-ba6162
-    2    0 A1   2100-0024ff-007511
-    3    0 A2   2100-0024ff-007586
 
 CLI>conmgr read
 
-  4 Drives
+  0 Drives
 ==========
- tnum type port wwpn               lun                rd  wr
-    0 A-P  B1   2070-00c0ff-275591 0035-000000000000   1   1
-           B2   2270-00c0ff-275591 0035-000000000000   1   1
-           B1   2470-00c0ff-275591 0035-000000000000   1   1
-           B2   2670-00c0ff-275591 0035-000000000000   1   1
-    1 A-P  B1   2070-00c0ff-2755af 0035-000000000000   1   1
-           B2   2270-00c0ff-2755af 0035-000000000000   1   1
-           B1   2470-00c0ff-2755af 0035-000000000000   1   1
-           B2   2670-00c0ff-2755af 0035-000000000000   1   1
-    2 A-A  B1   2011-0002ac-006221 0001-000000000000   1   1
-           B1   2111-0002ac-006221 0001-000000000000   1   1
-           B1   2211-0002ac-006221 0001-000000000000   1   1
-           B1   2311-0002ac-006221 0001-000000000000   1   1
-           B2   2022-0002ac-006221 0001-000000000000   1   1
-           B2   2122-0002ac-006221 0001-000000000000   1   1
-           B2   2222-0002ac-006221 0001-000000000000   1   1
-           B2   2322-0002ac-006221 0001-000000000000   1   1
-    3 A-A  B1   2011-0002ac-006222 0001-000000000000   1   1
-           B1   2111-0002ac-006222 0001-000000000000   1   1
-           B1   2211-0002ac-006222 0001-000000000000   1   1
-           B1   2311-0002ac-006222 0001-000000000000   1   1
-           B2   2022-0002ac-006222 0001-000000000000   1   1
-           B2   2122-0002ac-006222 0001-000000000000   1   1
-           B2   2222-0002ac-006222 0001-000000000000   1   1
-           B2   2322-0002ac-006222 0001-000000000000   1   1
 
-  3 Engines        our engine number:     3
+  0 Engines        our engine number:     0
 ===========
- tnum port wwpn
-    1 B1   2300-006022-ad0cde
-      B2   2400-006022-ad0cde
-    2 B1   2300-006022-ad0ce0
-      B2   2400-006022-ad0ce0
-    4 B1   2300-006022-ad0ce4
-      B2   2400-006022-ad0ce4
 
-  4 Initiators
+  0 Initiators
 ==============
- tnum type port wwpn
-    0    0 A2   2100-001b32-9a6162
-    1    0 A1   2101-001b32-ba6162
-    2    0 A1   2100-0024ff-007511
-    3    0 A2   2100-0024ff-007586
 
 CLI>conmgr mode
 
@@ -488,11 +373,11 @@ Port A1 SFP information:
   Identifier         : SFP transceiver
   Connector          : LC
   Nominal Bit Rate   : 8500 Mb/s
-  Vendor Name        : CISCO-AVAGO     
-  Part Number        : SFBR-5780APZ    
-  Revision Level     : B4  
-  Serial Number      : AGD1410203E     
-  Date of Manufacture: 03/09 2010
+  Vendor Name        : FINISAR CORP.   
+  Part Number        : FTLF8528P2BNV-EM
+  Revision Level     : A   
+  Serial Number      : PDL3FXB         
+  Date of Manufacture: 05/20 2008
 
 CLI>sfp a2
 
@@ -500,11 +385,11 @@ Port A2 SFP information:
   Identifier         : SFP transceiver
   Connector          : LC
   Nominal Bit Rate   : 8500 Mb/s
-  Vendor Name        : CISCO-AVAGO     
-  Part Number        : SFBR-5780APZ-CS2
-  Revision Level     : G2.3
-  Serial Number      : AGD162482JP     
-  Date of Manufacture: 06/20 2012
+  Vendor Name        : BROCADE         
+  Part Number        : 57-1000117-01   
+  Revision Level     : A   
+  Serial Number      : UAF413180000RG8 
+  Date of Manufacture: 05/03 2013
 
 CLI>sfp b1
 
@@ -512,11 +397,11 @@ Port B1 SFP information:
   Identifier         : SFP transceiver
   Connector          : LC
   Nominal Bit Rate   : 8500 Mb/s
-  Vendor Name        : CISCO-AVAGO     
-  Part Number        : SFBR-5780APZ    
-  Revision Level     : B4  
-  Serial Number      : AGD1410202L     
-  Date of Manufacture: 03/09 2010
+  Vendor Name        : FINISAR CORP.   
+  Part Number        : FTLF8528P2BNV-EM
+  Revision Level     : A   
+  Serial Number      : PG30YLT         
+  Date of Manufacture: 07/14 2009
 
 CLI>sfp b2
 
@@ -524,18 +409,18 @@ Port B2 SFP information:
   Identifier         : SFP transceiver
   Connector          : LC
   Nominal Bit Rate   : 8500 Mb/s
-  Vendor Name        : CISCO-AVAGO     
-  Part Number        : SFBR-5780APZ-CS2
-  Revision Level     : G2.3
-  Serial Number      : AGD140480VG     
-  Date of Manufacture: 01/31 2010
+  Vendor Name        : FINISAR CORP.   
+  Part Number        : FTLF8528P2BNV-EM
+  Revision Level     : A   
+  Serial Number      : PH33YP8         
+  Date of Manufacture: 01/14 2010
 
 CLI>port
 
-Port A1 enabled, link active at 8 Gb/s
-Port A2 enabled, link active at 8 Gb/s
-Port B1 enabled, link active at 8 Gb/s
-Port B2 enabled, link active at 8 Gb/s
+Port A1 enabled, link inactive
+Port A2 enabled, link inactive
+Port B1 enabled, link inactive
+Port B2 enabled, link inactive
 
 CLI>proxy
 
@@ -564,17 +449,7 @@ CLI>map
 
 Auto-application of Map 0 to all HBAs is disabled
 
-Defined LUN Maps:
-  1:
-     Raw data:
-       0x8201 (33281), 0x8202 (33282)
-     Groups resolved, any duplicates ignored:
-       0x8201 (33281), 0x8202 (33282)
-     Skip count 1
-     Used by this engine for:
-       2100-001b32-9a6162 2101-001b32-ba6162 2100-0024ff-007511
-       2100-0024ff-007586
-
+No LUN Maps defined
 
 CLI>site
 
@@ -582,7 +457,7 @@ Site isolation protection is currently disabled
 
 CLI>rtc
 
-Friday, 8/25/2017, 02:53:24
+Monday, 9/4/2018, 10:01:10
 Periodic reading is enabled with an interval of 60 minute(s)
 Current calibration # is 60
 
@@ -644,6 +519,6 @@ User Service Utility Key Assignments:
 'Q': Quit User Service Utility
 'Z': Coredump Menu
 
-HA-AP 14 > 
+CIO 14 > 
 Quit User Menu? (Y/N)
 Debug Session Terminated, Good Bye!
