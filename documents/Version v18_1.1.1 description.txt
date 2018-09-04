@@ -1,0 +1,13 @@
+Released Note:
+当前版本：v18_1.1.1
+日期：2018/09/04
+Author：Frederic wu
+
+更新原因及内容：
+GUI Code v18_1.1.1 解决了v18_1.1.0版本上 Configuration面板出现的错误。
+
+原因：__builtin__.SIMMOD = 1 (即模拟情况) GUI是需要从cmg文件里获取信息的，如果某些Engine的cmg或者vpd文件丢失，则会出现报错。所以解决方法为：补全engine cmg文件
+__builtin__.SIMMOD = 0 (连接真实Engine) cmg、vpd文件从连接的engine里获取。
+
+新增ReleaseGUI.py文件： ReleaseGUI.py是用来发行新版本的，只需运行该文件即可获得新版本的解压包。但是这文件主要是面对客户的版本发布，不适用于模拟情况，因为没有trace文件
+夹下的文件，来进行调试。
