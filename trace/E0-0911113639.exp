@@ -1,5 +1,5 @@
-Telnet to : 10.203.1.111, Time Stamp : 2018-09-04 10:01:09.205
-Connection to the Loxoll SILVERstor ClusterIO HA engine has been established.
+Telnet to : 10.203.1.111, Time Stamp : 2018-09-11 11:36:39.430
+Connection to the Loxoll HA-AP engine has been established.
 Enter password: ********
 Password accepted!
 
@@ -19,15 +19,15 @@ User Service Utility Key Assignments:
 'Q': Quit User Service Utility
 'Z': Coredump Menu
 
-CIO 0 > Unknown status request in Serial Port Service default Utility Menu!
+HA-AP 0 > Unknown status request in Serial Port Service default Utility Menu!
 
-CIO 1 > Unknown status request in Serial Port Service default Utility Menu!
+HA-AP 1 > Unknown status request in Serial Port Service default Utility Menu!
 
-CIO 2 > Unknown status request in Serial Port Service default Utility Menu!
+HA-AP 2 > Unknown status request in Serial Port Service default Utility Menu!
 
-CIO 3 > Unknown status request in Serial Port Service default Utility Menu!
+HA-AP 3 > Unknown status request in Serial Port Service default Utility Menu!
 
-CIO 4 > 
-CIO 5 > 
+HA-AP 4 > 
+HA-AP 5 > 
 Quit User Menu? (Y/N)
 Debug Session Terminated, Good Bye!

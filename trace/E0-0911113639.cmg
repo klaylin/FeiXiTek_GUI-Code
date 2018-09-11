@@ -1,5 +1,5 @@
-Telnet to : 10.203.1.111, Time Stamp : 2018-09-04 10:01:09.870
-Connection to the Loxoll SILVERstor ClusterIO HA engine has been established.
+Telnet to : 10.203.1.111, Time Stamp : 2018-09-11 11:36:39.869
+Connection to the Loxoll HA-AP engine has been established.
 Enter password: ********
 Password accepted!
 
@@ -19,7 +19,7 @@ User Service Utility Key Assignments:
 'Q': Quit User Service Utility
 'Z': Coredump Menu
 
-CIO 0 > 
+HA-AP 0 > 
 Configure which interface?
 	A = Port A1
 	B = Port A2
@@ -33,7 +33,7 @@ Configure which interface?
 	      (shut down if no storage or engines seen)
 	<Enter> = done
 
-CIO 1 > 
+HA-AP 1 > 
 
 ** Port A1 configuration **
 Link speed settings:
@@ -71,7 +71,7 @@ Options:
 	<Esc> = restore entry settings (discard changes)
 	<Enter> = record changes (if any) and exit or reboot
 
-CIO 2 > 
+HA-AP 2 > 
 Configure which interface?
 	A = Port A1
 	B = Port A2
@@ -85,7 +85,7 @@ Configure which interface?
 	      (shut down if no storage or engines seen)
 	<Enter> = done
 
-CIO 3 > 
+HA-AP 3 > 
 
 ** Port A2 configuration **
 Link speed settings:
@@ -123,7 +123,7 @@ Options:
 	<Esc> = restore entry settings (discard changes)
 	<Enter> = record changes (if any) and exit or reboot
 
-CIO 4 > 
+HA-AP 4 > 
 Configure which interface?
 	A = Port A1
 	B = Port A2
@@ -137,7 +137,7 @@ Configure which interface?
 	      (shut down if no storage or engines seen)
 	<Enter> = done
 
-CIO 5 > 
+HA-AP 5 > 
 
 ** Port B1 configuration **
 Link speed settings:
@@ -175,7 +175,7 @@ Options:
 	<Esc> = restore entry settings (discard changes)
 	<Enter> = record changes (if any) and exit or reboot
 
-CIO 6 > 
+HA-AP 6 > 
 Configure which interface?
 	A = Port A1
 	B = Port A2
@@ -189,7 +189,7 @@ Configure which interface?
 	      (shut down if no storage or engines seen)
 	<Enter> = done
 
-CIO 7 > 
+HA-AP 7 > 
 
 ** Port B2 configuration **
 Link speed settings:
@@ -227,7 +227,7 @@ Options:
 	<Esc> = restore entry settings (discard changes)
 	<Enter> = record changes (if any) and exit or reboot
 
-CIO 8 > 
+HA-AP 8 > 
 Configure which interface?
 	A = Port A1
 	B = Port A2
@@ -241,19 +241,19 @@ Configure which interface?
 	      (shut down if no storage or engines seen)
 	<Enter> = done
 
-CIO 9 > 
+HA-AP 9 > 
 
 ** Storage Emulation Options **
-Current inquiry option is <SILVERstor>
-Entry inquiry option was <SILVERstor>
+Current inquiry option is <Loxoll>
+Entry inquiry option was <Loxoll>
 Storage emulation options:
-	D = SILVERstor (default)
+	D = Loxoll (default)
 	S = SDD
 	? = show settings as changed
 	<Esc> = restore entry settings (discard changes)
 	<Enter> = accept and exit
 
-CIO 10 > 
+HA-AP 10 > 
 Configure which interface?
 	A = Port A1
 	B = Port A2
@@ -267,8 +267,8 @@ Configure which interface?
 	      (shut down if no storage or engines seen)
 	<Enter> = done
 
-CIO 11 > 
-CIO 12 > 
+HA-AP 11 > 
+HA-AP 12 > 
 User Service Utility Key Assignments:
 
 '?': Show User Service Utility Key Assignments Menu
@@ -285,7 +285,7 @@ User Service Utility Key Assignments:
 'Q': Quit User Service Utility
 'Z': Coredump Menu
 
-CIO 13 > 
+HA-AP 13 > 
 Enter [exit] to return
 CLI>conmgr engine status
 
@@ -306,23 +306,18 @@ CLI>engine
 
    Engine  Status  Serial #  IP Addresses (1/2)                Firmware
    --------------------------------------------------------------------
->> 0  (M)  Online  11340468  10.203.1.111/20.20.20.1           15.9.7.8 #20
+>> 0  (M)  Online  11340468  10.203.1.111/20.20.20.1           15.9.7.9 OR
 
 CLI>drvstate
 
 
 Resource drives:
-    Target #        Capacity (LBA)  I/O cnt  State
-    --------        --------------  -------  -----
-        2044            1073741824        0  Operational
-        2045            1073741824        0  Operational
-        2046            1073741824        0  Operational
-        2047            1073741824        0  Operational
+    None defined
 
 Complex drives:
     Target #   Subtype   I/O cnt  State
     --------  ---------  -------  -----
-      0x8201   Mirror          0  Operational
+      0x8201   Mirror          0  has_undef
 
 
 CLI>license status
@@ -339,7 +334,7 @@ Installed licenses:
 
 Mask words: 6c, 80, 40008, 0
 
-SILVERstor bundle
+Loxoll bundle
 
 CLI>conmgr
 
@@ -457,7 +452,7 @@ Site isolation protection is currently disabled
 
 CLI>rtc
 
-Monday, 9/4/2018, 10:01:10
+Monday, 9/11/2018, 11:36:38
 Periodic reading is enabled with an interval of 60 minute(s)
 Current calibration # is 60
 
@@ -490,7 +485,7 @@ ACA support is currently enabled
 
 CLI>health
 
-Overall system health is good
+Overall system health is not good
 
 CLI>serial
 
@@ -519,6 +514,6 @@ User Service Utility Key Assignments:
 'Q': Quit User Service Utility
 'Z': Coredump Menu
 
-CIO 14 > 
+HA-AP 14 > 
 Quit User Menu? (Y/N)
 Debug Session Terminated, Good Bye!

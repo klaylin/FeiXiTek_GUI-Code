@@ -36,7 +36,7 @@ __builtin__.TWO_SECOND  = 2
 __builtin__.FIVE_SECOND = 5
 
 __builtin__.DEVELOPMENT = 1
-__builtin__.SIMMOD = 1
+__builtin__.SIMMOD = 0
 __builtin__.MONITOR = 0
 __builtin__.CHINESE = 0
 __builtin__.BG_TIMER = 2
